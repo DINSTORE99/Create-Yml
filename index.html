@@ -1,42 +1,94 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="id">
 <head>
-  <meta charset="utf-8">
-  <title>Xray Converter (VMess / Trojan / VLESS)</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DIN STORE | Xray Converter</title>
+
+    <!-- Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
 
-  <div class="container">
+    <div class="container">
 
-    <h2>Xray Converter → Clash YAML</h2>
-    <p>Support VMess / Trojan / VLESS</p>
+        <h1 class="title">
+            <i class="fa-solid fa-shield-halved"></i>
+            Xray Converter
+        </h1>
 
-    <div class="card">
-      <label>Input Link</label>
-      <textarea id="input" placeholder="vmess:// / trojan:// / vless://"></textarea>
+        <p class="desc">
+            Convert <b>VMess</b>, <b>VLESS</b>, dan <b>Trojan</b> menjadi <b>Clash YAML</b>.
+        </p>
 
-      <div class="row">
-        <button id="convert">Create</button>
-        <button id="copy">Copy</button>
-        <button id="clear">Clear</button>
-      </div>
+        <div class="card">
 
-      <label>Output YAML</label>
-      <textarea id="output" readonly></textarea>
+            <label for="input">
+                <i class="fa-solid fa-link"></i>
+                Input Link
+            </label>
+
+            <textarea
+                id="input"
+                placeholder="Tempel link vmess://, vless:// atau trojan:// di sini..."
+            ></textarea>
+
+            <div class="row">
+
+                <button id="convert" class="btn primary">
+                    <i class="fa-solid fa-wand-magic-sparkles"></i>
+                    Create
+                </button>
+
+                <button id="copy" class="btn success">
+                    <i class="fa-solid fa-copy"></i>
+                    Copy
+                </button>
+
+                <button id="clear" class="btn danger">
+                    <i class="fa-solid fa-trash"></i>
+                    Clear
+                </button>
+
+            </div>
+
+            <label for="output">
+                <i class="fa-solid fa-file-code"></i>
+                Output YAML
+            </label>
+
+            <textarea
+                id="output"
+                readonly
+                placeholder="Hasil convert akan muncul di sini..."
+            ></textarea>
+
+        </div>
+
+        <footer class="footer">
+
+            <a href="https://wa.me/6287776581216" target="_blank" class="footer-btn">
+                <i class="fa-brands fa-whatsapp"></i>
+                WhatsApp Admin
+            </a>
+
+            <p>© 2026 DIN STORE</p>
+            <small>Powered by DIN STORE</small>
+
+        </footer>
+
     </div>
 
-  </div>
+    <script src="script.js"></script>
 
-  <footer class="footer">
-    <div class="footer-box">
-      <div class="footer-links">
-        <a href="https://wa.me/6287776581216" target="_blank">📱 WhatsApp</a>
-      </div>
-    </div>
-  </footer>
-
-  <script src="script.js"></script>
 </body>
 </html>
