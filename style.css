@@ -1,206 +1,234 @@
-*{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  }
+
+body {
+font-family: 'Poppins', sans-serif;
+background: #0f1115;
+color: #ffffff;
+min-height: 100vh;
+display: flex;
+justify-content: center;
+align-items: center;
+padding: 25px 15px;
 }
 
-body{
-    font-family:'Poppins',sans-serif;
-    background:#050816;
-    color:#fff;
-    min-height:100vh;
-    display:flex;
-    justify-content:center;
-    align-items:center;
-    padding:30px 15px;
-    overflow-x:hidden;
-    position:relative;
+.container {
+width: 100%;
+max-width: 600px;
 }
 
-/* Background */
-body::before{
-    content:"";
-    position:fixed;
-    inset:0;
-    background:
-        radial-gradient(circle at 20% 20%,rgba(0,255,255,.18),transparent 25%),
-        radial-gradient(circle at 80% 40%,rgba(0,140,255,.18),transparent 25%),
-        radial-gradient(circle at 50% 80%,rgba(0,255,170,.18),transparent 25%);
-    animation:bgMove 12s linear infinite alternate;
-    z-index:-2;
+/* Judul */
+.title {
+text-align: center;
+font-size: 30px;
+font-weight: 700;
+margin-bottom: 8px;
+color: #ffffff;
 }
 
-body::after{
-    content:"";
-    position:fixed;
-    inset:0;
-    background-image:
-    radial-gradient(#ffffff55 1px,transparent 1px);
-    background-size:35px 35px;
-    opacity:.25;
-    z-index:-1;
+.title i {
+margin-right: 8px;
 }
 
-@keyframes bgMove{
-    from{transform:translateY(0);}
-    to{transform:translateY(-50px);}
+/* Deskripsi */
+.desc {
+text-align: center;
+color: #9ca3af;
+font-size: 14px;
+margin-bottom: 25px;
 }
 
-.container{
-    width:100%;
-    max-width:720px;
+/* Card */
+.card {
+background: #171a21;
+border: 1px solid #292e38;
+border-radius: 12px;
+padding: 22px;
 }
 
-.title{
-    text-align:center;
-    font-size:34px;
-    font-weight:800;
-    color:#00eaff;
-    text-shadow:0 0 20px #00eaff;
-    margin-bottom:10px;
+/* Label */
+label {
+display: block;
+margin-bottom: 9px;
+color: #e5e7eb;
+font-size: 14px;
+font-weight: 600;
 }
 
-.title i{
-    margin-right:10px;
+/* Textarea */
+textarea {
+width: 100%;
+min-height: 180px;
+resize: vertical;
+
+padding: 14px;
+
+background: #0f1115;
+color: #ffffff;
+
+border: 1px solid #303641;
+border-radius: 8px;
+
+outline: none;
+
+font-family: monospace;
+font-size: 14px;
+
+transition: border-color 0.2s ease;
+
 }
 
-.desc{
-    text-align:center;
-    color:#bfc9d8;
-    margin-bottom:30px;
-    font-size:15px;
+textarea:focus {
+border-color: #4b5563;
 }
 
-.card{
-    background:rgba(13,18,35,.85);
-    backdrop-filter:blur(14px);
-    border:1px solid rgba(0,234,255,.25);
-    border-radius:22px;
-    padding:25px;
-    box-shadow:0 0 35px rgba(0,234,255,.15);
+/* Button Row */
+.row {
+display: flex;
+gap: 10px;
+margin-bottom: 18px;
+flex-wrap: wrap;
 }
 
-label{
-    display:block;
-    margin-bottom:10px;
-    color:#00eaff;
-    font-weight:600;
+/* Button */
+.btn {
+flex: 1;
+
+border: 0;
+border-radius: 8px;
+
+padding: 12px 15px;
+
+font-family: 'Poppins', sans-serif;
+font-size: 14px;
+font-weight: 600;
+
+cursor: pointer;
+
+transition:
+    background 0.2s ease,
+    transform 0.2s ease;
+
 }
 
-textarea{
-    width:100%;
-    min-height:180px;
-    resize:vertical;
-    border:none;
-    outline:none;
-    border-radius:14px;
-    padding:15px;
-    margin-bottom:20px;
-    background:#08101f;
-    color:#fff;
-    font-size:14px;
-    font-family:monospace;
-    border:1px solid #1b3954;
-    transition:.3s;
+.btn i {
+margin-right: 7px;
 }
 
-textarea:focus{
-    border-color:#00eaff;
-    box-shadow:0 0 15px rgba(0,234,255,.4);
+/* Primary */
+.primary {
+background: #2563eb;
+color: #ffffff;
 }
 
-.row{
-    display:flex;
-    gap:12px;
-    margin-bottom:20px;
-    flex-wrap:wrap;
+.primary:hover {
+background: #1d4ed8;
 }
 
-.btn{
-    flex:1;
-    border:none;
-    border-radius:12px;
-    padding:14px;
-    font-size:15px;
-    font-weight:700;
-    cursor:pointer;
-    transition:.25s;
+/* Success */
+.success {
+background: #16a34a;
+color: #ffffff;
 }
 
-.btn i{
-    margin-right:8px;
+.success:hover {
+background: #15803d;
 }
 
-.primary{
-    background:#00bfff;
-    color:#fff;
+/* Danger */
+.danger {
+background: #dc2626;
+color: #ffffff;
 }
 
-.success{
-    background:#00c853;
-    color:#fff;
+.danger:hover {
+background: #b91c1c;
 }
 
-.danger{
-    background:#ff3b3b;
-    color:#fff;
+.btn:active {
+transform: scale(0.98);
 }
 
-.btn:hover{
-    transform:translateY(-3px);
-    box-shadow:0 0 18px rgba(255,255,255,.2);
+/* Footer */
+.footer {
+margin-top: 22px;
+text-align: center;
 }
 
-.footer{
-    margin-top:25px;
-    text-align:center;
+/* WhatsApp */
+.footer-btn {
+display: inline-flex;
+align-items: center;
+gap: 8px;
+
+padding: 11px 18px;
+
+background: #16a34a;
+color: #ffffff;
+
+border-radius: 8px;
+
+text-decoration: none;
+
+font-size: 14px;
+font-weight: 600;
+
+transition: background 0.2s ease;
+
 }
 
-.footer-btn{
-    display:inline-flex;
-    align-items:center;
-    gap:10px;
-    padding:14px 22px;
-    border-radius:50px;
-    background:#25D366;
-    color:#fff;
-    text-decoration:none;
-    font-weight:700;
-    transition:.3s;
+.footer-btn:hover {
+background: #15803d;
 }
 
-.footer-btn:hover{
-    transform:translateY(-3px);
-    box-shadow:0 0 20px #25D366;
+/* Copyright */
+.footer small {
+display: block;
+
+margin-top: 15px;
+
+color: #6b7280;
+
+font-size: 12px;
+
 }
 
-.footer small{
-    display:block;
-    margin-top:18px;
-    color:#9fb2c8;
-    font-size:13px;
+/* =========================
+MOBILE
+========================= */
+
+@media (max-width: 600px) {
+
+body {
+    padding: 20px 12px;
 }
 
-@media(max-width:600px){
-
-.title{
-    font-size:28px;
+.title {
+    font-size: 26px;
 }
 
-.card{
-    padding:20px;
+.desc {
+    font-size: 13px;
+    margin-bottom: 20px;
 }
 
-.row{
-    flex-direction:column;
+.card {
+    padding: 18px;
 }
 
-.btn{
-    width:100%;
+.row {
+    flex-direction: column;
 }
 
-textarea{
-    min-height:150px;
+.btn {
+    width: 100%;
+}
+
+textarea {
+    min-height: 150px;
 }
 
 }
